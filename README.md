@@ -3,4 +3,4 @@ Plugin for M269 students
 
 
 ## Installation
-Download the file [Install Student Plugin.ipynb](Install Student Plugin.ipynb) into your Jupyter environment, open and follow the instructions.
+Download the file _Install Student Plugin.ipynb_ into your Jupyter environment, open and follow the instructions.

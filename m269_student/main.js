@@ -100,12 +100,36 @@ define([
         ])
       }
 
+      var OnPageLoad = function() {
+        //alert("Loaded!");
+        var config = IPython.notebook.config;
+
+        if (config.data.hasOwnProperty('m269_student_set_single_tab')) {
+            if (config.data.m269_student_set_single_tab == true) {
+                console.log('single tab');
+                $("a").each(function() {
+                    if (this.rel == "nofollow") 
+                    {
+                        //console.log(this.rel);
+                        //console.log(this.target);
+                        this.target = "_self";
+                        //console.log(this.target);
+                    }
+                });    
+            } else {
+                //alert('multi tab');
+                console.log('multi tab');
+            }
+        }
+     }
+
     // Run on start
     function load_ipython_extension() {
         UnlockCells();
         LockCells();
         AddNotes();
         AddColors();
+        OnPageLoad();
     }
     return {
         load_ipython_extension: load_ipython_extension

@@ -6,4 +6,7 @@ Link: README.md
 Description: |
   Extension to aid students in the OU Module M269.
 Parameters:
-- none
+- name: m269_student_set_single_tab
+  description: Set links to open in a single tab.
+  input_type: checkbox
+  default: false
